@@ -1,9 +1,9 @@
 ---
 name: opencli
-description: "OpenCLI — Make any website or Electron App your CLI. Zero risk, AI-powered, reuse Chrome login. 80+ commands across 19 sites."
+description: "OpenCLI — Make any website or Electron App your CLI. Zero risk, AI-powered, reuse Chrome login. 80+ commands across 20 sites."
 version: 0.7.3
 author: jackwener
-tags: [cli, browser, web, chrome-extension, cdp, bilibili, zhihu, twitter, github, v2ex, hackernews, reddit, xiaohongshu, xueqiu, youtube, boss, coupang, AI, agent]
+tags: [cli, browser, web, chrome-extension, cdp, bilibili, zhihu, twitter, github, v2ex, hackernews, reddit, xiaohongshu, xueqiu, youtube, boss, coupang, chaoxing, AI, agent]
 ---
 
 # OpenCLI
@@ -133,6 +133,14 @@ opencli weibo hot --limit 10            # 微博热搜
 # BOSS直聘 (browser)
 opencli boss search --query "AI agent"  # 搜索职位
 opencli boss detail --securityId xxx    # 职位详情
+
+# 学习通 Chaoxing (browser)
+opencli chaoxing assignments                        # 列出所有课程作业
+opencli chaoxing assignments --course "数学"         # 按课程名模糊过滤
+opencli chaoxing assignments --status pending        # 按状态过滤 (all/pending/submitted/graded)
+opencli chaoxing assignments --limit 10              # 限制返回数量
+opencli chaoxing exams                               # 列出所有课程考试
+opencli chaoxing exams --course "数学" --status upcoming  # 按课程和状态过滤
 
 # YouTube (browser)
 opencli youtube search --query "rust"   # 搜索视频

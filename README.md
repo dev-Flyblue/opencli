@@ -123,6 +123,7 @@ Run `opencli list` for the live registry.
 | **zhihu** | `hot` `search` `question` `download` | 🔐 Browser |
 | **youtube** | `search` `video` `transcript` | 🔐 Browser |
 | **boss** | `search` `detail` | 🔐 Browser |
+| **chaoxing** | `assignments` `exams` | 🔐 Browser |
 | **coupang** | `search` `add-to-cart` | 🔐 Browser |
 | **bbc** | `news` | 🌐 Public |
 | **ctrip** | `search` | 🔐 Browser |

@@ -124,6 +124,7 @@ npm install -g @jackwener/opencli@latest
 | **zhihu** | `hot` `search` `question` `download` | 🔐 浏览器 |
 | **youtube** | `search` `video` `transcript` | 🔐 浏览器 |
 | **boss** | `search` `detail` | 🔐 浏览器 |
+| **chaoxing** | `assignments` `exams` | 🔐 浏览器 |
 | **coupang** | `search` `add-to-cart` | 🔐 浏览器 |
 | **bbc** | `news` | 🌐 公共 API |
 | **ctrip** | `search` | 🔐 浏览器 |
