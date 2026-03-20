@@ -8,6 +8,7 @@ import { browserSession, DEFAULT_BROWSER_COMMAND_TIMEOUT, runWithTimeout } from 
 import { PKG_VERSION } from './version.js';
 import { printCompletionScript } from './completion.js';
 import { CliError } from './errors.js';
+import { shouldUseBrowserSession } from './capabilityRouting.js';
 
 export function runCli(BUILTIN_CLIS: string, USER_CLIS: string): void {
   const program = new Command();
@@ -158,7 +159,7 @@ export function runCli(BUILTIN_CLIS: string, USER_CLIS: string): void {
       try {
         if (actionOpts.verbose) process.env.OPENCLI_VERBOSE = '1';
         let result: any;
-        if (cmd.browser) {
+        if (shouldUseBrowserSession(cmd)) {
           const BrowserFactory = process.env.OPENCLI_CDP_ENDPOINT ? CDPBridge : BrowserBridge;
           result = await browserSession(BrowserFactory as any, async (page) => {
             return runWithTimeout(executeCommand(cmd, page, kwargs, actionOpts.verbose), { timeout: cmd.timeoutSeconds ?? DEFAULT_BROWSER_COMMAND_TIMEOUT, label: fullName(cmd) });
